@@ -1,0 +1,4 @@
+*** Skematikette Changelog ***
+
+2012.10.23 - version 1.0
+	*First release!
