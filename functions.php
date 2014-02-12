@@ -1,8 +1,14 @@
 <?php
 /*
 ==========================================================
-ATTENTION!! THIS FILE IS LEFT BLANK SO YOU CAN BUILD IN
-YOUR OWN CUSTOM FUNCTIONALITY. YOU CAN USE THE CODE IN
-'sample-functions.php' AS A GUIDE TO BUILD YOUR OWN.
+YOU CAN BUILD IN YOUR OWN CUSTOM FUNCTIONALITY HERE
 ==========================================================
 */
+
+add_action('jbst_child_settings','sample_jbst_child_settings');
+function sample_jbst_child_settings()
+{
+	//define('navbar_background_color','red');
+}	
+
+

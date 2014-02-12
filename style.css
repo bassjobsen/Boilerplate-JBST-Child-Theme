@@ -7,10 +7,20 @@ Description: Sample child theme for Jamedo's Bootstrap Start Theme (JBST).
 Version: 1.0
 License: GNU General Public License
 License URI: license.txt
-Tags:3 column, WooCommerce, Boostrap 3
+Tags:3 column, WooCommerce, Bootstrap 3
 Template: jamedo-bootstrap-start-theme
 */
 @import url(../jamedo-bootstrap-start-theme/style.css);
 /*
-This file is specifically left blank so that you can put any custom styles here and know that they aren't necessarily core styles. However, you may want to properly register a custom stylesheet. We show you how to do just that in the sample-functions.php file.
-*/
+ * The best place to add custom CSS / LESS will be in less/custom.less or direct edit in the LESS Compiler
+ * If you add custom CSS here, consider to disable the LESS Compile at all:
+ * 
+ * add to your function.php:
+ * 
+ *  add_action('jbst_child_settings','sample_jbst_child_settings');
+ *	function sample_jbst_child_settings()
+ *	{
+ * 	if(!defined('jbst_less'))define('jbst_less',0);
+ *	}	
+ * 
+ * /
