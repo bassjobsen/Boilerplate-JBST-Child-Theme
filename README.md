@@ -5,10 +5,10 @@ JBST is a powerful theme framework that can be used as a standalone website buil
 
 Getting started
 ---------------
- 1) Download, install (do not active) JBST [https://github.com/bassjobsen/jamedo-bootstrap-start-theme/archive/master.zip](https://github.com/bassjobsen/jamedo-bootstrap-start-theme/archive/master.zip)
- 2) Copy [the Boilerplate files](https://github.com/bassjobsen/Boilerplate-JBST-Child-Theme/archive/master.zip) to `wordpress/wp-content/themes/Boilerplate-JBST-Child-Theme/`
- 3) rename the folder from step 2 and open 'style.css' and change the theme info (name, author, description, etc) 
- 4) activate your child theme in your Dashboard Appearance > Themes
+ 1. Download, install (do not active) JBST [https://github.com/bassjobsen/jamedo-bootstrap-start-theme/archive/master.zip](https://github.com/bassjobsen/jamedo-bootstrap-start-theme/archive/master.zip)
+ 2. Copy [the Boilerplate files](https://github.com/bassjobsen/Boilerplate-JBST-Child-Theme/archive/master.zip) to `wordpress/wp-content/themes/Boilerplate-JBST-Child-Theme/`
+ 3. rename the folder from step 2 and open 'style.css' and change the theme info (name, author, description, etc) 
+ 4. activate your child theme in your Dashboard Appearance > Themes
  
 LESS Compiler
 -------------
