@@ -90,9 +90,12 @@ Below you will find a list of predefined setting:
 	/* site color */
 	if(!defined('link_color'))define('link_color',false);
 	
-	/* */
+	/* grid */
 	if(!defined('container_width'))define('container_width','1200');
+	if(!defined('gridfloatbreakpoint'))define('gridfloatbreakpoint','768');
+	if(!defined('default_grid'))define('default_grid','md');
 	
+	/* fonts */
 	if(!defined('heading_font_family'))define('heading_font_family','Helvetica Neue'); 
 		
 Action hooks and filters
