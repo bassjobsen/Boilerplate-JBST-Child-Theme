@@ -122,6 +122,7 @@ Action hooks
 	 * @hooked jbst_body_open - 40 
 	 * @hooked jbst_main_navbar - 50 
 	 * @hooked jbst_top_content_wrapper - 60 
+	 * @hooked jbst_open_content_wrappers - 100
 	 * @since 2.0.6
 	 */
 	do_action( 'jbst_header' ); 
@@ -132,6 +133,7 @@ Action hooks
 	 * Displays footer for every page, wrapped inside <footer>
 	 * Includes a copy right at bottom
 	 * 
+	 * @hooked jbst_close_content_wrappers - 1
 	 * @hooked jbst_right_sidebar - 9
 	 * @hooked jbst_bottom_content_wrapper - 20
 	 * @hooked jbst_footer_area - 30
@@ -154,17 +156,9 @@ Action hooks
 	 */
 	do_action( 'jbst_head' );
 
-	/** 
-	 * before the main content including side bars 
-	 * @hooked jbst_open_content_wrappers - 10
-	 */
-	do_action( 'jbst_before_content_page' ); //index.php
 
-	/** 
-	 * after the main content including side bars 
-	 * @hooked jbst_close_content_wrappers - 10
-	 */
-	do_action( 'jbst_after_content_page' ); //index.php
+
+
 	do_action( 'after_page_content' ); //jbst-footer-functions.php
 
 
