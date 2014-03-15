@@ -95,6 +95,9 @@ Below you will find a list of predefined setting:
 	if(!defined('gridfloatbreakpoint'))define('gridfloatbreakpoint','768');
 	if(!defined('default_grid'))define('default_grid','md');
 	
+	/* page layout */
+	if(!defined('jbst_default_page_layout'))define('jbst_default_page_layout','right-sidebar');
+	
 	/* fonts */
 	if(!defined('heading_font_family'))define('heading_font_family','Helvetica Neue'); 
 		
@@ -142,6 +145,13 @@ Action hooks
 	 * @since 2.0.6
 	 */
 	do_action( 'jbst_footer' ); 
+	
+	/** navbar 
+	* before and after the navbar content
+	* example: add_action('jbst_navbar_right', function(){echo '<p class="navbar-text navbar-right">Signed in as <a href="#" class="navbar-link">Mark Otto</a></p>';});
+	*/
+	do_action('jbst_navbar_left');
+	do_action('jbst_navbar_right');
 
 	/* content nav - runs above and below all content. We recommend you further filter these, for example only making content navigation buttons on posts and not other content types */
 	jbst_content_nav( 'nav-above' );
