@@ -5,10 +5,12 @@ JBST is a powerful theme framework that can be used as a standalone website buil
 
 Getting started
 ---------------
- 1. Download, install (do not active) JBST [https://github.com/bassjobsen/jamedo-bootstrap-start-theme/archive/master.zip](https://github.com/bassjobsen/jamedo-bootstrap-start-theme/archive/master.zip)
+ 1. Download, install (do not active) JBST [https://github.com/bassjobsen/jbst/archive/master.zip](https://github.com/bassjobsen/jbst/archive/master.zip)
  2. Copy [the Boilerplate files](https://github.com/bassjobsen/Boilerplate-JBST-Child-Theme/archive/master.zip) to `wordpress/wp-content/themes/Boilerplate-JBST-Child-Theme/`
  3. rename the folder from step 2 and open 'style.css' and change the theme info (name, author, description, etc) 
  4. activate your child theme in your Dashboard Appearance > Themes
+ 
+[Download Child Theme instructions](https://github.com/bassjobsen/Boilerplate-JBST-Child-Theme/jbstchildtheming.pdf) 
  
 LESS Compiler
 -------------
@@ -305,7 +307,7 @@ Filters
 	 * returns the logo or brand text, depending on customizer settings (should be an action hook??)
 	 * returns only a link
 	 * used inside the navbar
-	 * see also: https://github.com/bassjobsen/jamedo-bootstrap-start-theme/issues/103
+	 * see also: https://github.com/bassjobsen/jbst/issues/103
 	 */ 
 	apply_filters('jbst_logo',jbst_logo());} 
 
@@ -314,7 +316,7 @@ Filters
 	 * returns only a link wrapped in <div class="container"><div class="row"><div class="col-xs-12"><div class="logo-outside-nav container {extraclasses}">
 	 * {extraclasses} in the above can be set by: apply_filters('jbst_logooustside_classes',array());, see also: http://jbst.eu/knowledge-base/center-logo-outside-navbar/
 	 * used outside the navbar
-	 * see also: https://github.com/bassjobsen/jamedo-bootstrap-start-theme/issues/103
+	 * see also: https://github.com/bassjobsen/jbst/issues/103
 	 */ 
 	apply_filters('jbst_logooustside',jbst_logooustside());
 
@@ -365,10 +367,36 @@ Filters
 
 	 /**
 	 * sets webfont, default font or font add with @font-face
-	 * see also: https://github.com/bassjobsen/jamedo-bootstrap-start-theme/issues/108
+	 * see also: https://github.com/bassjobsen/jbst/issues/108
 	 */ 
 	apply_filters('jbst_set_webfonts',array('Helvetica Neue' => 'Helvetica Neue', 'Arial' => 'Arial', 'Lucida Bright' => 'Lucida Bright','Georgia' => 'Georgia', 'Times New Roman' => 'Times New Roman'));
 	
+Built-in Less Mixins and Variables
+==================================
+
+Less variables
+--------------
+
+	@stylesheet_directory_uri //equals get_stylesheet_directory_uri().
+	@custom-font-dir //equals get_stylesheet_directory_uri().'/assets/fonts/'.
+
+	@font-family-base  //bootstrap Less variable, sets the main font on the body
+	@headings-font-family //bootstrap Less variable
+	@navbar-default-font-family
+	@logo_font_family
+
+	@footer-bg-color
+	@footer-text-color
+	@footer-link-color
+	@footer-link-hover-color
+
+Less mixins
+-----------
+
+	.include-custom-font(@family: arial,@font-path, @path: @custom-font-dir, @weight: normal, @style: normal);
+
+Where `@font-path should` be set to the name of the font file without extension. So for instance, with `.include-custom-font('Calibri','calibri-webfront');` you font directory (`wordpress/wp-content/themes/{your-child-theme}/assets/fonts/`) should contain: `calibri-webfront.svg`, `calibri-webfront.eot`, `calibri-webfront.ttf` and `calibri-webfront.woff`.
+
 Templates
 =========
 JBST has it's own templating engine which operates from the index.php file in the parent theme. However, you can make your own custom page templates that override the templating engine and can be selected from the 'Page Attributes' section of your page edit screen.
@@ -386,9 +414,9 @@ You can overwrite these by add a file with the same name in your child theme's f
 
 Examples
 ========
- - [ADD a custom webfont](https://github.com/bassjobsen/jamedo-bootstrap-start-theme/issues/108)
- - [How to Remove the logo position filter from header?](https://github.com/bassjobsen/jamedo-bootstrap-start-theme/issues/103)
- - [Two colums in header](https://github.com/bassjobsen/jamedo-bootstrap-start-theme/issues/98)
- - [Create an action for front-page only](https://github.com/bassjobsen/jamedo-bootstrap-start-theme/issues/102) 
- - [How do I install this in the header?](https://github.com/bassjobsen/jamedo-bootstrap-start-theme/issues/97) 
- - [Adopt the parent themes function to manage on childtheme footer widget](https://github.com/bassjobsen/jamedo-bootstrap-start-theme/issues/101)
+ - [ADD a custom webfont](https://github.com/bassjobsen/jbst/issues/108)
+ - [How to Remove the logo position filter from header?](https://github.com/bassjobsen/jbst/issues/103)
+ - [Two colums in header](https://github.com/bassjobsen/jbst/issues/98)
+ - [Create an action for front-page only](https://github.com/bassjobsen/jbst/issues/102) 
+ - [How do I install this in the header?](https://github.com/bassjobsen/jbst/issues/97) 
+ - [Adopt the parent themes function to manage on childtheme footer widget](https://github.com/bassjobsen/jbst/issues/101)
