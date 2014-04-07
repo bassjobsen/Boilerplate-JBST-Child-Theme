@@ -10,7 +10,7 @@ Getting started
  3. rename the folder from step 2 and open 'style.css' and change the theme info (name, author, description, etc) 
  4. activate your child theme in your Dashboard Appearance > Themes
  
-[Download Child Theme instructions](https://raw.github.com/bassjobsen/Boilerplate-JBST-Child-Theme//master/jbstchildtheming.pdf) 
+[Download Child Theme instructions](https://raw.github.com/bassjobsen/Boilerplate-JBST-Child-Theme/master/jbstchildtheming.pdf) 
  
 LESS Compiler
 -------------
