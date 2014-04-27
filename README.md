@@ -48,7 +48,12 @@ Below you will find a list of predefined setting:
 -------------------------------------------------
  /* PREDEFINED SETTINGS */
 
- 
+ 	/* html, body */
+	if(!defined('less_body_bg'))define('less_body_bg','');
+	
+	/* #page, content including side bars */
+	if(!defined('less_content_bg'))define('less_content_bg','');
+	
  
  	/* navbar */
 	if(!defined('navbar_style'))define('navbar_style','default');
@@ -309,7 +314,12 @@ Filters
 	 * used inside the navbar
 	 * see also: https://github.com/bassjobsen/jbst/issues/103
 	 */ 
-	apply_filters('jbst_logo',jbst_logo());} 
+	apply_filters('jbst_logo',jbst_logo();} 
+	
+	/*
+	* used inside jbst_logo, return get_bloginfo('name')
+	*/
+	apply_filters('jbst_brand_name',get_bloginfo('name')) 
 
 	/**
 	 * returns the logo or brand text, depending on customizer settings (should be an action hook??)
@@ -376,7 +386,8 @@ Built-in Less Mixins and Variables
 
 Less variables
 --------------
-
+        @content_bg //set the background-color of #page (content including side bars)
+	
 	@stylesheet_directory_uri //equals get_stylesheet_directory_uri().
 	@custom-font-dir //equals get_stylesheet_directory_uri().'/assets/fonts/'.
 
