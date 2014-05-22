@@ -8,9 +8,9 @@ Version: 1.0
 License: GNU General Public License
 License URI: license.txt
 Tags:3 column, WooCommerce, Bootstrap 3
-Template: jamedo-bootstrap-start-theme
+Template: jbst
 */
-@import url(../jamedo-bootstrap-start-theme/style.css);
+@import url(../jbst/style.css);
 /*
  * The best place to add custom CSS / LESS will be in less/custom.less or direct edit in the LESS Compiler
  * If you add custom CSS here, consider to disable the LESS Compile at all:
